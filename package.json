@@ -2,11 +2,20 @@
   "name": "eval",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "sechisrv.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "node_modules/.bin/nodemon sechisrv.js ",
     "start": "npm run nodemon"
+=======
+  "main": "app-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "node_modules/.bin/nodemon app-server.js",
+    "browser-sync": "node_modules/.bin/browser-sync start --watch --files public --proxy http://localhost:8000",
+    "start": "npm run nodemon & npm run browser-sync"
+>>>>>>> 447a895ab8528e6877e3135ac584f2d2e20577f0
   },
   "author": "",
   "license": "ISC",
