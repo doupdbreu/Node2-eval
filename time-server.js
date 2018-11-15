@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     .header({
         'Content-Type': 'application/json',
       })
-    .json(formattedDate)
+    .json({time: formattedDate})
 })
 
 

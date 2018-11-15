@@ -17,7 +17,7 @@ app.get('/secret', function (req, res) {
     res.header({
         'Content-Type': 'application/json',
       })
-      .json(_content)
+      .json({secret: _content})
   })
 })
 
