@@ -6,7 +6,11 @@ const moment = require('moment')
 app.get('/', (req, res) => {
     const date = new Date()
     const formattedDate = moment(date).format('HH:mm:ss');
-    res.send('il est : ' + formattedDate)
+    res
+    .header({
+        'Content-Type': 'application/json',
+      })
+    .json(formattedDate)
 })
 
 

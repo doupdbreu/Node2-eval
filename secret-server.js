@@ -10,18 +10,14 @@ const jsonMiddleware = express.json()
 app.use(jsonMiddleware)
 
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-
 app.get('/secret', function (req, res) {
   fs.readFile('./data/secret.txt','utf8', function (err, data) {
     if (err) throw err;
     var _content = reverse(data)
     res.header({
-        'Content-Type': 'text/html; charset=utf-8',
+        'Content-Type': 'application/json',
       })
-      .send(_content)
+      .json(_content)
   })
 })
 
