@@ -5,7 +5,7 @@ const moment = require('moment')
 
 app.get('/', (req, res) => {
     const date = new Date()
-    const formattedDate = moment(date).format('h:mm:ss');
+    const formattedDate = moment(date).format('HH:mm:ss');
     res.send('il est : ' + formattedDate)
 })
 
