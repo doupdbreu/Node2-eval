@@ -1,3 +1,10 @@
+
+Vue.component('interval', {
+  props: [
+    "formattedDate",
+    "resultsBis"
+  ],
+})
 const vm = new Vue({
     el : '#app',
     template: `
@@ -15,6 +22,13 @@ const vm = new Vue({
         items: [],
         formItem: {
             text: '',
+        }
+    },
+    methods: {
+        intervalData(){
+          this.formattedDate = setInterval(() => {
+            this.resultsBis =!this.resultsBis;
+          }, 1000);
         }
     }
 })
